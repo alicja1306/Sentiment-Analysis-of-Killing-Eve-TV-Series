@@ -30,17 +30,26 @@ for i in div:
 
       
 reviews=[]
-for j in div:
-    if j.find('div',{'class':"text show-more__control"}):
-        reviews.append(j.find('div',{'class':"text show-more__control"}).text)
+for i in div:
+    if i.find('div',{'class':"text show-more__control"}):
+        reviews.append(i.find('div',{'class':"text show-more__control"}).text)
     else:
         reviews.append(0) #if review doesn't exist
 
+date=[]
+for i in div:
+    if i.find('span',{'class':"review-date"}):
+        date.append(i.find('span',{'class':"review-date"}).text)
+    else:
+        date.append(0)  #if date doesn't exist     
+
 print(len(sentiments))
 print(len(reviews))
+print(len(date))
 print(len(div))
+
         
-df = pd.DataFrame({'reviews': reviews,'sentiment': sentiments})
+df = pd.DataFrame({'reviews': reviews,'sentiment': sentiments,'date':date})
 
 df.head()
 
