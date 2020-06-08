@@ -5,7 +5,7 @@ import pandas as pd
 driver = webdriver.Chrome(executable_path="/Users/alicja/Downloads/chromedriver")
 driver.get('https://www.imdb.com/title/tt7016936/reviews?ref_=tt_urv')
 
-
+# Load all the page data, by clicking Load More button.
 while True:
     try:
         loadMoreButton = driver.find_element_by_class_name('load-more-data')
