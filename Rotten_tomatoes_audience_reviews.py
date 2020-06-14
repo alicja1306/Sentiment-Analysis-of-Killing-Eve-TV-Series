@@ -9,9 +9,9 @@ url = ['https://www.rottentomatoes.com/tv/killing_eve/s01/reviews?type=user','ht
 
     
 star = 0
-sentiment = []
-reviews=[]
-dates = []
+sentiment = [] # for storing scores 
+reviews=[] # for storing reviews
+
 
 for page in url: 
     driver.get(page)
@@ -31,10 +31,6 @@ for page in url:
         for i in review:
             reviews.append(i.text)
         
-        date = soup.find_all('span',{'class':'audience-reviews__duration'})
-        for i in date:
-            dates.append(i.text)
-        
         try:
             
             NextButton = driver.find_element_by_css_selector('#content > div > div > nav:nth-child(4) > button.js-prev-next-paging-next.btn.prev-next-paging__button.prev-next-paging__button-right > span')
@@ -50,11 +46,9 @@ print("Complete")
 
 print(len(reviews))
 print(len(sentiment))
-print(len(dates))
 
 
-
-df = pd.DataFrame({'reviews': reviews ,'sentiment': sentiment,'date':dates})
+df = pd.DataFrame({'reviews': reviews ,'sentiment': sentiment})
 
 
 df.to_csv('rotten_tomatoes_audience_reviews.csv',index=False)
