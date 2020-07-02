@@ -1,4 +1,4 @@
-# :thumbsup: Sentiment Analysis of Killing Eve TV Series :thumbsdown:
+# :thumbsup: Sentiment Analysis of Killing Eve TV Series :thumbsup:
 
 Tools: beautifulsoup, selenium, pandas, plotly, nltk, scikit-learn
 
