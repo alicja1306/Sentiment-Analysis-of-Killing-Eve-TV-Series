@@ -8,8 +8,8 @@ Performed web scraping to extract reviews of popular tv series to predict their 
 filename | description
 ------------ | -------------
 WebScrapingIMDBReviews.py | Used selenium and beautifulsoup to extract reviews from IMDB website. 
-RottenTomatoesAudienceReviews.py | 
-RottenTomatoesCriticsReviews.py | 
+RottenTomatoesAudienceReviews.py | Scraped audience reviews from RottenTomatoes website by using selenium and beautifulsoup. 
+RottenTomatoesCriticsReviews.py | Extracted reviews from critics from RottenTomatoes with us of beautifulsoup and requests library. 
 
 
 1. Implemented web scraper using BeautifulSoup and selenium to fetch reviews from IMDB and Rotten Tomatoes websites. 
