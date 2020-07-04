@@ -1,5 +1,7 @@
 # Sentiment Analysis of Killing Eve TV Series :thumbsup:
 
+<img src="images/killingeve.jpg" width="900" height="300" />
+
 Tools: beautifulsoup, selenium, pandas, plotly, nltk, scikit-learn
 
 Performed web scraping to extract reviews of popular tv series to predict their polarity using lexicon-based approaches (TextBlob, VADER) and machine learning classifiers such as Naive Bayes, SVM, and Logistic Regression while dealing with imbalanced data. 
