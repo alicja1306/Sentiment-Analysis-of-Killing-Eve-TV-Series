@@ -35,11 +35,12 @@ for i in div:
         reviews.append(i.find('div',{'class':"text show-more__control"}).text)
     else:
         reviews.append(0) #if review doesn't exist
+        
 
-
+# checking if reviews and sentiments have the same length
 print(len(sentiments))
 print(len(reviews))
-print(len(div))
+
 
         
 df = pd.DataFrame({'reviews': reviews,'sentiment': sentiments})
