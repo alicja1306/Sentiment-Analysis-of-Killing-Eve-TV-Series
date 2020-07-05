@@ -43,14 +43,14 @@ for page in url:
 print("Complete")
         
 
-
-print(len(reviews))
+# checking if reviews and sentiment have the same length
+print(len(reviews)) 
 print(len(sentiment))
 
 
 df = pd.DataFrame({'reviews': reviews ,'sentiment': sentiment})
 
 
-df.to_csv('rotten_tomatoes_audience_reviews.csv',index=False)
+df.to_csv('rotten_tomatoes_audience_reviews.csv',index=False) 
 
 
