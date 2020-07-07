@@ -18,3 +18,5 @@ filename | description
 2. Conducted data pre-processing and cleaning by removing stop words, punctuation, numbers and detected language of each review.
 3. Visualized data using word clouds and barplots.
 4. Calculated sentiment score of each review by comparing it’s tokens with positive and negative lexicon. 
+5. Applied Multinomial Naive Bayes (MultinomialNB) and Stochastic Gradient Descent Classifier (SGDClassifier) with Tf-idf and CountVectorizer.
+6. Used GridSearchCV to find the optimal parameters.
