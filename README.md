@@ -4,7 +4,7 @@
 
 Tools: beautifulsoup, selenium, requests, pandas, plotly, nltk, scikit-learn, imblearn, langdetect, wordcloud, joblib
 
-Performed web scraping to extract reviews of popular tv series to predict their polarity using lexicon-based approaches (TextBlob, VADER) and machine learning classifiers such as Naive Bayes, SVM, and Logistic Regression while dealing with imbalanced data. 
+Performed web scraping to extract reviews of popular tv series to predict their polarity using lexicon-based approaches (TextBlob, VADER) and machine learning classifiers such as Naive Bayes, SGDClassifier while dealing with imbalanced data. 
 
 
 filename | description
