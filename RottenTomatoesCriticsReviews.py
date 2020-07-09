@@ -19,16 +19,19 @@ def getData(season,page):
     reviews.extend(review)
     sentiment.extend(find_sentiment)
 
+min_season = 1
+max_season = 3
+min_page_numer = 1
+max_page_numer = 6
         
-for season in range(1,4):
-    for page in range(1,6):
+for season in range(min_season,max_season+1):
+    for page in range(min_page_number,max_page_number):
         getData(season,page)
 
-        
 df = pd.DataFrame({'reviews': reviews,'sentiment': sentiment})
 
 df['sentiment'].replace(['fresh', 'rotten'], ['positive', 'negative'], inplace=True)
 
-df = df.replace(r'\n',  '', regex=True)
+df = df.replace(r'\n','', regex=True)
 
 df.to_csv('rotten_tomatoes_reviews.csv',index=False)
