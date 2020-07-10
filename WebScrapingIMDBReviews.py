@@ -5,17 +5,14 @@ import pandas as pd
 driver = webdriver.Chrome(executable_path="/Users/alicja/Downloads/chromedriver")
 driver.get('https://www.imdb.com/title/tt7016936/reviews?ref_=tt_urv')
 
-# Load all the page data, by clicking Load More button.
+# Load all the page data, by clicking load more button.
 while True:
     try:
-        loadMoreButton = driver.find_element_by_class_name('load-more-data')
-        loadMoreButton.click()
+        load_more_button = driver.find_element_by_class_name('load-more-data')
+        load_more_button.click()
     except Exception as e:
         print(e)
         break
-print("Complete")
-
-
 
 soup=BeautifulSoup(driver.page_source, 'lxml') 
 
@@ -28,7 +25,6 @@ for i in div:
     else:
         sentiments.append(0) #if user rate doesn't exist
 
-      
 reviews=[]
 for i in div:
     if i.find('div',{'class':"text show-more__control"}):
@@ -36,13 +32,10 @@ for i in div:
     else:
         reviews.append(0) #if review doesn't exist
         
-
 # checking if reviews and sentiments have the same length
 print(len(sentiments))
 print(len(reviews))
-
-
-        
+       
 df = pd.DataFrame({'reviews': reviews,'sentiment': sentiments})
 
 df.head()
@@ -50,5 +43,3 @@ df.head()
 data = df[df.sentiment != 0] #removing rows without user rate
 
 data.to_csv('imbd_reviews.csv',index=False)
-
-
