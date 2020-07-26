@@ -37,6 +37,6 @@ df = pd.DataFrame({'reviews': reviews, 'sentiment': sentiments})
 df.head()
 
 data = df[df.sentiment != 0] #removing rows without user rate
-data = df[df.reviews != 0] #removing rows without reviews
+data = data[data.reviews != 0] #removing rows without reviews
 
 data.to_csv('imbd_reviews.csv', index = False)
